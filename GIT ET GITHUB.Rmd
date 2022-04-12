@@ -1,0 +1,212 @@
+---
+title: "SEMINAIRE: GIT ET GITHUB"
+author: "Koffi AMEZOUWUI"
+date: "Strasbourg, le 12/04/2022"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    incremental: yes
+    keep_tex: yes
+    theme: Montpellier
+  ioslides_presentation: default
+  slidy_presentation: default
+  df_print: kable
+  theme: "AnnArbor"
+  keep_tex: yes
+  fonttheme: "structurebold"
+  widescreen: true
+  smaller: true
+  colortheme: "dolphin"
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Git: présentation et explications des concepts
+
+Git est un système de contrôle de version gratuit et open source.
+Il a été développé en 2005 et est devenu depuis le système de contrôle de version le plus couramment utilisé
+
+## C'est quoi un contrôle de version ?
+
+-   Le contrôle de version est un système qui enregistre les modifications apportées à un fichier ou à un ensemble de fichiers au fil du temps.
+-   Au fur et à mesure que vous apportez des modifications, le système de contrôle de version prend des instantanés de vos fichiers et des modifications
+-   Puis enregistre ces instantanés afin que vous puissiez vous y référer et revenir aux versions précédentes plus tard, si nécessaire.
+
+## La facilité de Git et Rstudio
+
+-   Un autre avantage important dont nous allons certainement profiter est la facilité avec laquelle RStudio et Git s'interfacent entre eux.
+-   Dans la suite, nous allons installer Git, le relier à RStudio et créer un compte GitHub. GitHub est une interface en ligne pour Git.
+-   Git est un logiciel utilisé localement sur votre ordinateur pour enregistrer les modifications.
+-   GitHub est un hôte pour vos fichiers et les enregistrements des modifications apportées
+
+## Guide d'installation de GIT
+
+-   Pour installer Git, allez sur: \< <http://git-scm.com/> >.
+-   On va se laisser guider par git pour l'installation. Une fois git installer on va devoir ouvrir un invite de commande (sur windows) ou terminal (sur Mac-books) dans laquelle on va mettre les instructions en ligne de commande.
+-   Une fois sur le terminal, il faut d'abord verifier si git a été correctement installer; pour cela il faut taper la commande: **git - -version** puis entrée. Si *git* est bien installer (un message de la version installer va s'afficher) dans le cas échant un message d'erreur et il faut reprendre l'installation de git.
+
+## Guide d'installation de GIT (identification)
+
+-   En suite,il faut un paramètrage de votre identité pour permettre a git d'identifier la personne qui a fait une modification du code par exemple (à expliquer plus tard).
+
+-   Pour cela, taper les commandes suivantes dans le terminal ou invite de commande:
+
+-   **git config - -global user.name "koffi Amezouwui"**
+
+-   **git config - -global user.email "[joelamezouwui\@gmail.com](mailto:joelamezouwui@gmail.com){.email}"**
+
+-   Après ce paramétrage, c'est parti git est donc opérationnel.
+
+## Informations
+
+-   Git a assez de fonctionnalité, mais dans le cadre de mon séminaire je vais présenter juste le dépot sur GITHUB (l'interface de GIT).
+
+-   Pour cela nous allons créer un compte github et après revenir dans l'invite de commande ou terminale pour exécuter les commandes afin d'effectuer un dépot distant sur github a travers GIT.
+
+## Comment créer un compte de Github?
+
+Pour créer un compte GitHub, allez sur: \< www.github.com \>.
+
+-   Arrivé sur la page d'accueil où vous devrez remplir vos informations: créer un nom d'utilisateur, entrer votre adresse électronique, choisir un mot de passe sécurisé et cliquer sur sign up for GitHub.
+
+-   Vous devriez maintenant être connecté à GitHub.
+    À l'avenir, pour vous connecter à GitHub, allez sur github.com où une page d'accueil vous sera présentée.
+
+-   Si vous n'êtes pas déjà connecté, cliquez sur le lien de connexion en haut de la page.
+    Une fois que vous avez fait cela, vous verrez la page de connexion où vous devrez entrer votre nom d'utilisateur et votre mot de passe que vous avez créés plus tôt.
+
+## Remplissage des informations
+
+Maintenant que vous êtes connecté à GitHub, nous devons remplir certaines informations de votre profil et nous familiariser avec les paramètres du compte.
+Dans le coin supérieur droit, il y a une icône avec une étroite à côté d'elle.
+Cliquez dessus pour accéder à votre profil.
+C'est à partir de là que vous contrôlez votre compte et que vous pouvez voir vos contributions, vos historiques et vos référentiels.
+Puisque vous débutez, vous n'avez pas encore de dépôts ou de contributions, mais nous espérons que cela changera assez vite.
+Ce que nous pouvons faire dès maintenant, c'est modifier votre profil.
+Allez sur modifier le profil sur le bord gauche de la page.
+Prenez le temps de remplir votre nom et une petite description de vous-même dans le champ "bio".
+
+## Remplissage des informations (suite)
+
+Si vous le souhaitez, téléchargez une photo de vous.
+Lorsque vous avez terminé, cliquez sur Mettre à jour le profil.
+Sur le côté gauche de cette page, vous trouverez de nombreuses options à explorer.
+Cliquez sur chacun de ces menus pour vous familiariser avec les options qui vous sont proposées.
+Pour commencer, allez sur la page du compte.
+Vous pouvez y modifier votre mot de passe ou, si vous n'êtes pas satisfait de votre nom d'utilisateur, le changer.
+
+## Prise en main de GITHUB
+
+Attention cependant, il peut y avoir des conséquences inattendues lorsque vous changez votre nom d'utilisateur si vous débutez et n'avez pas encore de contenu, mais vous ne risquez rien.
+Continuez à parcourir les options de paramètres personnels par vous-même.
+Lorsque vous avez terminé, revenez à votre profil.
+Une fois que vous aurez acquis un peu plus d'expérience avec GitHub, vous finirez par avoir quelques dépôts à votre nom.
+Pour les trouver, cliquez sur le lien "repositories" de votre profil.
+À la fin, revenez sur cette page pour trouver votre dépôt nouvellement créé.
+Ensuite, nous allons vérifier le menu des notifications.
+
+## Prise en main de GITHUB (suite)
+
+Le long de la barre de menu en haut de votre fenêtre, il y a une icône de cloche qui représente vos notifications.
+Cliquez sur la cloche.
+Une fois que vous êtes plus actif sur GitHub et que vous collaborez avec d'autres personnes, c'est ici que vous pouvez trouver des messages et des notifications pour tous les dépôts, équipes et conversations dont vous faites partie.
+En bas de chaque page se trouve le bouton d'aide.
+GitHub a mis en place un excellent système d'aide.
+
+## Liaison entre Rstudio avec GITHUB
+
+Maintenant que RStudio et Git sont installés sur votre ordinateur dans un compte GitHub, il est temps de les relier entre eux afin de maximiser les avantages de l'utilisation de RStudio dans vos pipelines de contrôle de version.
+- Pour lier RStudio à Git, dans RStudio, allez dans Outils, puis Options globales, puis Git/SVN.
+Parfois, le chemin par défaut de l'exécutable Git n'est pas correct.
+- Confirmez que git.exe réside dans le répertoire que RStudio a spécifié.
+Si ce n'est pas le cas, changez le répertoire pour le chemin correct.
+Sinon, cliquez sur "Okay" ou "Apply".
+Rstudio et Git sont maintenant liés.
+
+## Liaison entre Rstudio avec GITHUB(suite)
+
+-   Maintenant, pour lier RStudio à GitHub, dans la même fenêtre d'options de RStudio, cliquez sur "Create RSA Key" et quand c'est terminé, cliquez sur "Close".
+-   Ensuite, dans cette même fenêtre, cliquez sur "View public key" et copiez la chaîne de chiffres et de lettres. Fermez cette fenêtre.
+-   Vous avez maintenant créé une clé qui vous est propre et que nous allons fournir à GitHub afin qu'il sache qui vous êtes lorsque vous effectuez une modification à partir de RStudio.
+-   Pour ce faire, allez sur github.com, connectez-vous si vous ne l'êtes pas déjà, et allez dans les paramètres de votre compte. Là, allez dans Clés SSH et GPG et cliquez sur "Nouvelle clé SSH". Collez la clé publique que vous avez copiée de RStudio dans la case de la clé et donnez-lui un titre lié à RStudio.
+
+## Liaison entre Rstudio avec GITHUB(suite)
+
+-   Confirmez l'ajout de la clé avec votre mot de passe GitHub. GitHub et RStudio sont maintenant liés. À partir de là, nous pouvons créer un dépôt sur GitHub et le lier à RStudio.
+-   Pour ce faire, allez sur GitHub et créez un nouveau dépôt en allant dans votre profil, Dépôts et Nouveau. Nommez votre nouveau dépôt de test et donnez-lui une courte description. - Cliquez sur "Create Repository", copiez l'URL de votre nouveau dépôt. Dans RStudio, allez dans Fichier, Nouveau projet, sélectionnez Contrôle de version, sélectionnez Git comme logiciel de contrôle de version. Collez l'URL du dépôt que vous venez de copier, sélectionnez l'emplacement où vous souhaitez stocker le projet. Lorsque vous avez terminé, cliquez sur "Créer un projet".
+
+## Liaison entre Rstudio avec GITHUB(suite)
+
+-   Ce faisant, vous initialiserez un nouveau projet lié au dépôt GitHub et ouvrirez une nouvelle session de RStudio.
+    Créez un nouveau script R en allant dans Fichier, Nouveau fichier, Script R et copiez et collez le code suivant : print("Ce fichier a été créé dans RStudio") et ensuite sur une nouvelle ligne collez, print("Et maintenant il vit sur GitHub").
+    Enregistrez le fichier.
+
+-   Notez que lorsque vous le faites, l'emplacement par défaut du fichier se trouve dans le nouveau répertoire de projet que vous avez créé plus tôt.
+    Une fois que c'est fait, en regardant de nouveau dans RStudio, dans l'onglet Git du quadrant environnement, vous devriez voir le fichier que vous venez de créer.
+    Cochez la case sous Staged pour mettre en scène votre fichier.
+
+## Liaison entre Rstudio avec GITHUB (suite et fin)
+
+-   Cliquez dessus et cliquer Commit. Une nouvelle fenêtre devrait s'ouvrir et répertorier tous les fichiers modifiés par rapport à la version précédente et, en dessous, montrer les différences entre les fichiers mis en scène et les versions précédentes. Dans le quadrant supérieur, dans la zone Commit message, écrivez un message de validation. Cliquez sur Commit, puis fermez la fenêtre.
+-   Jusqu'à présent, vous avez créé un fichier, l'avez enregistré, l'avez mis en scène et l'avez validé. L'étape suivante consiste à pousser vos modifications vers votre dépôt en ligne, à pousser vos modifications vers le dépôt GitHub, à vous rendre sur votre dépôt GitHub et à voir que le commit a été enregistré. Vous venez de pousser avec succès votre premier commit depuis RStudio vers GitHub
+
+## Procédure du depot distant du script sur GITHUB
+
+-   Avant de commencer, nous allons créer un dossier depuis notre ordinateur et mettre notre script (R, python,puis un pdf ou etc.) puis un nouveau projet sur **github**. Voir l'image:
+
+```{=tex}
+\begin{figure}[h]
+            \centering
+                \includegraphics[width=1.2 \linewidth]{capturegit}
+                \caption{Mon compte Github}
+                %\label{fig:capturegit}
+                \end{figure}
+```
+## Procédure du depot distant du script sur GITHUB (suite)
+
+Pour ce faire retournons dans l'invite de commande ou le terminal; et exécutons les commandes suivantes les unes après les autres:
+
+-   **pwd** puis *entrée* ; ce qui signifie (present work directory) pour connaitre ton repertoire de travail actuel.
+-   **cd** puis aller copier le chemin d'accès du dossier dans paramètre et sécurité après coler devant **cd** après avoir faire un espace; apres faire *entrée*: ce qui signifie (change directory) pour changer ton repertoire de travail.
+-   **git init** puis *entrée*; ce qui lui permet d'initier en créant un dossier ./git qui es invisible mais on peux le retrouver si l'ont veux, en ligne de commande.
+
+## Procédure du depot distant du script sur GITHUB (suite)
+
+Ensuite:
+
+-   **git add .** puis *entrée*.
+
+-   **git commit -m "Mon premier commit"** puis *entrée*.
+
+## Dépot distant du script sur GITHUB (suite et fin)
+
+Maintenat il reste deux commandes à exécuter pour envoyer votre code sur github.Lorsque nous avions créer notre nouveau projet confère image ci-dessus, il ya un lien github [**https:/**](https:/){.uri}**....** deja créer en notre *nom* et *nom du code* qu'il faut ajouter comme suit:
+
+-   **git remote add origin <https://github/Joellebon/MonCode.git>** puis *entrée* ;(ce qui lui permet de se connecter a github pour envoyer).
+    Pour terminer l'envoie faire:
+
+-   **git push -u origin master** puis *entrée*; ce qui permet a git d'envoyer le code ou script.
+
+## Vérification sur github
+
+Une fois les commandes bien exécuter; nous devons retrouver notre code sur github; et voilà c'est fait...
+
+## Conclusion
+
+Dans ce séminaire, nous avons lié Git et RStudio afin que RStudio reconnaisse que vous l'utilisez comme logiciel de contrôle de version.
+Ensuite, nous avons lié RStudio à GitHub afin que vous puissiez pousser et tirer des dépôts depuis RStudio.
+Pour tester cela, nous avons créé un dépôt sur GitHub, nous l'avons lié à un nouveau projet dans RStudio; nous avons créé un nouveau fichier, puis nous avons mis en scène, validé et poussé le fichier vers votre dépôt GitHub.
+
+## Références (guides)
+
+-   Livre « Pro Git » : <http://git-scm.com/book/fr/v1>
+
+-   Apprendre Git: <https://www.atlassian.com/git/?utm_source=stash&utm_medium=i> n-app-help&utm_campaign=learn-git?l
+    ocale=fr_FR,fr
+
+-   Les bases de Git : <http://djibril.developpez.com/tutoriels/conception/progit/?page=page_2>
